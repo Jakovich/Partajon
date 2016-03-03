@@ -51,12 +51,50 @@ img{
 	font-size: 16px;
 	color: #F9EDCF;
 	text-transform: uppercase;
-	padding: 5px 15px;
-	border-right: 2px solid #F9EDCF;
+	padding: 5px 10px;
+	margin-right: 10px;
+	position:relative;
+	line-height: 20px;
 }
-.main-menu-top li:last-child a{
-	border-right: none;
+
+.effect a::before,
+.effect a::after {
+	position: absolute;
+	width: 30px;
+	height: 2px;
+	background: #fff;
+	content: '';
+	opacity: 0.9;
+	transition: all 0.3s;
 }
+
+.effect a::before {
+	top: 0;
+	left: 0;
+	transform: rotate(90deg);
+	transform-origin: 0 0;
+}
+
+.effect a::after {
+	right: 0;
+	bottom: 0;
+	transform: rotate(90deg);
+	transform-origin: 100% 100%;
+}
+
+.effect a:hover::before {
+    opacity: 1;
+	left: 50%;
+	transform: rotate(0deg) translateX(-50%);
+}
+
+.effect a:hover::after {
+    opacity: 1;
+	right: 50%;
+	transform: rotate(0deg) translateX(50%);
+}
+
+
 .intro{
 	height: auto;
 	min-height:421px;
