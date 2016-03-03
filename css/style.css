@@ -2,8 +2,9 @@ body {
 	font-family: 'Roboto Condensed', sans-serif;
 }
 
+/*Header*/
 .main-header{
-	background-color: #981B21
+	background-color: #981B21;
 }
 
 .navbar {
@@ -41,6 +42,10 @@ body {
 	background-color:#981B21;
 	margin-top: -1px;
 }
+ .dropdown-menu>li>a{
+	 padding-top:10px;
+	 padding-bottom: 10px;
+ }
 
 .nav .open > a, .nav .open > a:focus, .nav .open > a:hover {
     background-color: transparent;
@@ -70,14 +75,36 @@ body {
 	filter: blur(5px);
 }
 
+/*news*/
+
+.news {
+	background-color: #F9EDCF;
+	padding-top: 70px;
+	padding-bottom: 70px;
+}
+
+.news .news-header h1 {
+	display: inline-block;
+	text-transform: uppercase;
+	font-size:50px;
+	color: rgb(36,64,142);
+	border-bottom: 5px solid rgb(36,64,142);
+	letter-spacing: -0.06em;
+}
+
+.news .news-block {
+	margin-bottom: 25px;
+}
+
+/*about*/
+
 .about {
 	background: url('../img/about.jpg') 0 center no-repeat;
 	color: #ffffff;
 	text-align:center;
-	padding-top: 60px;
-	padding-bottom: 60px;
-	margin-top:30px;
-	margin-bottom: 30px;
+	padding-top:60px;
+	padding-bottom: 80px;
+	margin-bottom: 50px;
 }
 
 .about h2 {
@@ -92,6 +119,52 @@ body {
 	padding-right: 10%;
 	padding-left: 10%;
 }
+/*subscribe*/
+.subscribe {
+	padding-top: 0;
+	padding-bottom: 60px;
+}
+
+.subscribe h2 {
+	text-transform: uppercase;
+	font-size: 25px;
+	margin-bottom:30px;
+}
+.subscribe-form {
+	position: relative;
+}
+.subscribe-form .glyphicon-envelope {
+	font-size:25px;
+	position: absolute;
+	left:20px;
+	top:13px;
+	color: rgba(0,0,0,0.5);
+	
+}
+
+.subscribe-form input {
+	width:70%;
+	height: 50px;
+	border: 2px solid grey;
+	padding-left:65px;
+	padding-right:20px;
+	text-transform: uppercase;
+}
+
+.subscribe-form button{
+	margin-left: 7%;
+	border: none;
+	font-size: 16px;
+	background-color: #000000;
+	color: #ffffff;
+	text-transform: uppercase;
+	padding: 15px 7% 15px 7%;
+}
+.subscribe-form button:hover {
+	background-color: rgba(0,0,0,0.8);
+}
+
+/*footer*/
 
 .main-footer {
 	background-color: #981B21;
