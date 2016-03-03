@@ -1,117 +1,43 @@
+body {
+	font-family: 'Roboto Condensed', sans-serif;
+}
 
-a {
-	text-decoration: none;
-	display: inline-block;
-}
-img{
-	width: 100%;
-	height: auto;
-}
 .main-header{
 	background-color: #981B21
 }
-.main-header::after{
-	content: "";
-	display: table;
-	clear: both;
-}
-.container{
-	min-width: 1000px;
-	max-width: 1230px;
-	padding: 0 10px;
-	margin: 0 auto;
-}
-.main-header .container::after{
-	content: "";
-	display: table;
-	clear: both;
-}
-.main-navigation-top{
-	float: right;
-	margin-top: 25px;
-	max-width: 700px;
-}
-.main-header .logo{
-	float: left;
-	width: 300px;
-	padding-top: 10px;
-}
 
-.main-menu-top{
-	list-style: none;
-	margin:0;
-	padding:0;
-	font-size:0;
-}
-.main-menu-top li{
-	display: inline-block;
-	vertical-align: top;
-}
-.main-menu-top li a{
+.nav li a{
 	font-size: 16px;
 	color: #F9EDCF;
 	text-transform: uppercase;
-	padding: 5px 10px;
-	margin-right: 10px;
-	position:relative;
 	line-height: 20px;
 }
 
-.effect a::before,
-.effect a::after {
-	position: absolute;
-	width: 30px;
-	height: 2px;
-	background: #fff;
-	content: '';
-	opacity: 0.9;
-	transition: all 0.3s;
-}
-
-.effect a::before {
-	top: 0;
-	left: 0;
-	transform: rotate(90deg);
-	transform-origin: 0 0;
-}
-
-.effect a::after {
-	right: 0;
-	bottom: 0;
-	transform: rotate(90deg);
-	transform-origin: 100% 100%;
-}
-
-.effect a:hover::before {
-    opacity: 1;
-	left: 50%;
-	transform: rotate(0deg) translateX(-50%);
-}
-
-.effect a:hover::after {
-    opacity: 1;
-	right: 50%;
-	transform: rotate(0deg) translateX(50%);
-}
-
-
 .intro{
-	height: auto;
-	min-height:421px;
-	background: grey url("../img/background_4.jpg") no-repeat center center;
-	background-size:cover;
 	transition: all 0.5s ease 0s;
 }
+
 .intro:hover{
 	filter: blur(5px);
 }
-.intro .expl{
-	float: left;
-	margin-top: 250px;
-	width: 250px;
-	padding: 20px;
-	background: rgba(249,237,207,0.4);
-	color: #981B21;
-	font-size: 20px;
-	
+
+.main-footer {
+	background-color: #981B21;
+	padding-top:25px;
+	padding-bottom: 25px;
+	color: #ffffff;
+}
+
+.social-btn {
+    background-image: url("../img/icon_fb.png");
+	background-position: 15px 10px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 43px;
+    margin-right: 6px;
+    vertical-align: top;
+    width: 43px;
+}
+.social-btn-inst {
+	background-image: url("../img/icon_inst.png");
 }
