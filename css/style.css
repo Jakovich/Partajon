@@ -6,12 +6,61 @@ body {
 	background-color: #981B21
 }
 
+.navbar {
+    margin-bottom: 0;
+}
+
+.navbar-brand {
+    padding-top: 10px;
+}
+
 .nav li a{
 	font-size: 16px;
 	color: #F9EDCF;
+	font-weight: 700;
 	text-transform: uppercase;
 	line-height: 20px;
 }
+
+.nav>li>a:focus,
+.nav>li>a:hover {
+	background-color: transparent;
+	border:1px solid transparent;
+
+}
+
+.nav>li>a:hover {
+		color: #ffffff;
+}
+
+.nav-tabs {
+    border-bottom: none;
+}
+
+.navbar-nav > li > .dropdown-menu {
+	background-color:#981B21;
+	margin-top: -1px;
+}
+
+.nav .open > a, .nav .open > a:focus, .nav .open > a:hover {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.form-control {
+	background-color: #981B21;
+}
+.navbar .btn {
+	background-color: #981B21;
+}
+.navbar-form .glyphicon-search {
+	color: #F9EDCF;
+}
+
+
+/*.navbar-form {
+	font-size:0;
+}*/
 
 .intro{
 	transition: all 0.5s ease 0s;
@@ -19,6 +68,29 @@ body {
 
 .intro:hover{
 	filter: blur(5px);
+}
+
+.about {
+	background: url('../img/about.jpg') 0 center no-repeat;
+	color: #ffffff;
+	text-align:center;
+	padding-top: 60px;
+	padding-bottom: 60px;
+	margin-top:30px;
+	margin-bottom: 30px;
+}
+
+.about h2 {
+	font-size: 45px;
+	line-height: 60px;
+	text-transform: uppercase;
+}
+
+.about p {
+	font-size: 20px;
+	line-height: 30px;
+	padding-right: 10%;
+	padding-left: 10%;
 }
 
 .main-footer {
