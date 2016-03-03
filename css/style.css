@@ -5,6 +5,11 @@ body {
 /*Header*/
 .main-header{
 	background-color: #981B21;
+	background-image: url('../img/bg.jpg');
+	background-size:cover;
+	background-position: 0 center;
+	min-height: 700px;
+	padding-top:20px;
 }
 
 .navbar {
