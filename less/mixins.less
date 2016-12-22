@@ -1,0 +1,19 @@
+.clearfix ()  {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.bottom-gradient ()  {
+  &:after {
+    content: "";
+    position: absolute;
+    height: 6px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: @gradient;
+  }
+}
