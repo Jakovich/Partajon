@@ -13,7 +13,7 @@ var server = require("browser-sync");
 var rename = require("gulp-rename");
 var spritesmith = require("gulp.spritesmith");
 
-  
+
 
 
 gulp.task('webpack', function() {
@@ -25,11 +25,11 @@ gulp.task('webpack', function() {
 
 gulp.task("style", function(){
   gulp.src("less/style.less")
-  
+
   .pipe(plumber())
-  
+
   .pipe(less())
-  
+
   .pipe(postcss([
     autoprefixer({browsers: [
       "last 3 version",
@@ -39,19 +39,19 @@ gulp.task("style", function(){
       "last 2 Edge versions",
       "ie >= 8"
     ]})
-    
-    
+
+
   ]))
-  
+
   .pipe(gulp.dest("build/css"))
   .pipe(csso())
   .pipe(rename("style.min.css"))
   .pipe(gulp.dest("build/css"))
   .pipe(server.reload({stream: true}));
-  
+
   gulp.src("less/style_ie.less")
   .pipe(plumber())
-  
+
   .pipe(less())
   .pipe(gulp.dest("build/css"))
   .pipe(csso())
@@ -60,82 +60,22 @@ gulp.task("style", function(){
 });
 
 gulp.task("minJs", function(){
-  
-  gulp.src("scripts/common/ie.js")
-  
+
+  gulp.src("scripts/main.js")
+
   .pipe(gulp.dest("build/scripts/"))
   .pipe(uglify())
-  .pipe(rename("ie.min.js"))
+  .pipe(rename("main.min.js"))
   .pipe(gulp.dest("build/scripts/"))
-  
-  gulp.src("vendor/ionSlider/ion.rangeSlider.js")
-  
-  .pipe(gulp.dest("build/vendor/ionSlider/"))
-  .pipe(uglify())
-  .pipe(rename("ion.rangeSlider.min.js"))
-  .pipe(gulp.dest("build/vendor/ionSlider/"))
-  
+
 });
 
-gulp.task('concatCommonJs', function() {
-  return gulp.src(['scripts/common/form-valid.js', 'scripts/common/common.js', 'scripts/common/bookmark.js'])
-    .pipe(concat('common.js'))
-    .pipe(gulp.dest('build/scripts/'))
-    .pipe(uglify())
-    .pipe(rename("common.min.js"))
-    .pipe(gulp.dest("build/scripts/"))
-});
-
-gulp.task('concatFranchisesJs', function() {
-  return gulp.src(['scripts/franchises/search.js', 'scripts/franchises/franchises-basic.js'])
-    .pipe(concat('franchises.js'))
-    .pipe(gulp.dest('build/scripts/'))
-    .pipe(uglify())
-    .pipe(rename("franchises.min.js"))
-    .pipe(gulp.dest("build/scripts/"))
-});
-
-gulp.task('concatFranchiseJs', function() {
-  return gulp.src(['scripts/franchise/franchise.js', 'scripts/franchise/form-valid.js', 'scripts/franchise/youtube.js'])
-    .pipe(concat('franchise.js'))
-    .pipe(gulp.dest('build/scripts/'))
-    .pipe(uglify())
-    .pipe(rename("franchise.min.js"))
-    .pipe(gulp.dest("build/scripts/"))
-});
-
-gulp.task('concatFranchiseCreateJs', function() {
-  return gulp.src('scripts/franchise-create/*.js')
-    .pipe(concat('franchise-create.js'))
-    .pipe(gulp.dest('build/scripts/'))
-    .pipe(uglify())
-    .pipe(rename("franchise-create.min.js"))
-    .pipe(gulp.dest("build/scripts/"))
-});
-
-gulp.task('concatFranchiseRatingJs', function() {
-  return gulp.src('scripts/franchise-rating/*.js')
-    .pipe(concat('franchise-rating.js'))
-    .pipe(gulp.dest('build/scripts/'))
-    .pipe(uglify())
-    .pipe(rename("franchise-rating.min.js"))
-    .pipe(gulp.dest("build/scripts/"))
-});
-
-gulp.task('concatFranchiseAddJs', function() {
-  return gulp.src('scripts/franchise-add/*.js')
-    .pipe(concat('franchise-add.js'))
-    .pipe(gulp.dest('build/scripts/'))
-    .pipe(uglify())
-    .pipe(rename("franchise-add.min.js"))
-    .pipe(gulp.dest("build/scripts/"))
-});
 
 gulp.task("image", function(){
   return gulp.src("img/**/*.{png,jpg,gif}")
   .pipe(imagemin({
     optimizationLevel: 3,
-    progressive: true 
+    progressive: true
   }))
   .pipe(gulp.dest("build/img"))
 });
@@ -156,14 +96,14 @@ gulp.task("copyHtml", function() {
   gulp.src("fonts/**/*")
   .pipe(copy())
   .pipe(gulp.dest("build/fonts/"))
-  
+
 });
 
 gulp.task("copyJs", function() {
   gulp.src("scripts/**/*")
   .pipe(copy())
   .pipe(gulp.dest("build/scripts/"))
-  
+
 });
 
 gulp.task("copyVendor", function() {
@@ -172,24 +112,13 @@ gulp.task("copyVendor", function() {
   .pipe(gulp.dest("build/vendor"))
 });
 
-
-
-gulp.task("copyJslib", function() {
-  gulp.src(['js/vendor/**/*'])
-  .pipe(concat('lib.js'))
-  .pipe(gulp.dest('build/js/vendor'))
-  .pipe(uglify())
-  .pipe(rename('lib.min.js'))
-  .pipe(gulp.dest('build/js/vendor'))
-});
-
 gulp.task("franchise-sprite", function(){
   var spriteData = gulp.src('img/franchise/franchise-icons/*.png').pipe(spritesmith({
     imgName: 'franchise-sprite.png',
     cssName: 'franchise-sprite.less'
   }));
-    spriteData.img.pipe(gulp.dest('img/franchise')); 
-    spriteData.css.pipe(gulp.dest('less/sprites')); 
+    spriteData.img.pipe(gulp.dest('img/franchise'));
+    spriteData.css.pipe(gulp.dest('less/sprites'));
 });
 
 gulp.task("franchise-add-sprite", function(){
@@ -197,8 +126,8 @@ gulp.task("franchise-add-sprite", function(){
     imgName: 'franchise-add-sprite.png',
     cssName: 'franchise-add-sprite.less'
   }));
-    spriteData.img.pipe(gulp.dest('img/franchise')); 
-    spriteData.css.pipe(gulp.dest('less/sprites')); 
+    spriteData.img.pipe(gulp.dest('img/franchise'));
+    spriteData.css.pipe(gulp.dest('less/sprites'));
 });
 
 gulp.task("franchise-add-sprite-sm", function(){
@@ -206,8 +135,8 @@ gulp.task("franchise-add-sprite-sm", function(){
     imgName: 'franchise-add-sprite-sm.png',
     cssName: 'franchise-add-sprite-sm.less'
   }));
-    spriteData.img.pipe(gulp.dest('img/franchise')); 
-    spriteData.css.pipe(gulp.dest('less/sprites')); 
+    spriteData.img.pipe(gulp.dest('img/franchise'));
+    spriteData.css.pipe(gulp.dest('less/sprites'));
 });
 
 
@@ -218,17 +147,13 @@ gulp.task("show", function(){
     open: true,
     ui: false
   });
-  
+
   gulp.watch("less/**/*.less", ["style"]).on("change", server.reload);
   gulp.watch("vendor/**/*", ["copyVendor"]).on("change", server.reload);
   gulp.watch("*.html", ["copyHtml"]).on("change", server.reload);
-  gulp.watch("scripts/common/*", ["concatCommonJs"]).on("change", server.reload);
-  gulp.watch("scripts/franchises/**/*", ["concatFranchisesJs"]).on("change", server.reload);
-  gulp.watch("scripts/franchise/**/*", ["concatFranchiseJs"]).on("change", server.reload);
-  gulp.watch("scripts/franchise-create/**/*", ["concatFranchiseCreateJs"]).on("change", server.reload);
-  gulp.watch("scripts/franchise-add/**/*", ["concatFranchiseAddJs"]).on("change", server.reload);
-  gulp.watch("scripts/franchise-rating/**/*", ["concatFranchiseRatingJs"]).on("change", server.reload);
+  gulp.watch("scripts/*", ["minJs"]).on("change", server.reload);
+
   gulp.watch("img/*", ["image"]).on("change", server.reload);
 });
 
-gulp.task("build", ["clean", "copyHtml", "copyJs", "copyVendor", "style", "minJs", "concatCommonJs", "concatFranchisesJs", "concatFranchiseCreateJs", "concatFranchiseRatingJs","concatFranchiseJs", "concatFranchiseAddJs", "image"]);
+gulp.task("build", ["clean", "copyHtml",  "copyVendor", "style", "minJs", "image"]);
