@@ -11,6 +11,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">-->
     <link href="css/style.min.css" rel="stylesheet">
 </head>
 
@@ -32,6 +33,7 @@
                     </li>
 
                     <li><a href="#exam">Passer un examen blanc</a></li>
+                    <li><a href="#">Preparer pour un examen</a></li>
                     <li><a href="#">Contacts</a></li>
                 </ul>
                 <form class="navbar-form navbar-right">
@@ -182,8 +184,12 @@
 				Qu'est-сe que ça Partajon
 			</h2>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat ut sunt totam odit, architecto labore numquam sint sequi, voluptas saepe reprehenderit eligendi qui quam ratione cupiditate. Minus corporis natus ullam?
+                        C'est site est distiné aux étudiants désirant obtenir un diplôme de français langue étranger pour leur projet personeel et ensigneint qui les preparent.
                     </p>
+                    <p>
+                        Ce site est la continuation d'experience de plus des 10 ans de partage de resource pédagogique et des participation aux jury des examens DELF et DALF
+                    </p>
+                    <a href="#">En savoir plus <i class="fa fa-arrow-right"></i></a>
                 </header>
             </div>
         </section>
@@ -193,12 +199,52 @@
                 <header>
                     <h2>Subscribe to our newsletter to receive latest news</h2>
                     <form class="subscribe-form">
-                        <input type="email" name="email" placeholder="Email address">
-                        <span class="glyphicon glyphicon-envelope"></span>
-                        <button type="submit">Subscribe</button>
+                        <div class="row">
+                            <div class="col-md-9">
+                                <input type="email" name="email" placeholder="Email address">
+                                <span class="glyphicon glyphicon-envelope"></span>
+                            </div>
+                            <div class="col-md-3">
+                                <button type="submit">Subscribe</button>
+                            </div>
+                        </div>
                     </form>
                 </header>
             </div>
+        </section>
+
+        <section class="preparation">
+            <div class="container">
+                <h2 class="preparation__title">Se préparer aux examens</h2>
+                <ul>
+                    <li>
+                        <p>avec les Manuels existants</p>
+                        <p>list</p>
+                    </li>
+                    <li>
+                        <p>ressourse Partajon gratuites</p>
+                        <p>
+                            <a href="#">Compr. orale</a>
+                            <a href="#">Compr. ecrite</a>
+                        </p>
+                    </li>
+                    <li>
+                        <p>Module "Production ecrite"</p>
+                        <p>5 productions écrite corrigés, commentées, avec l'un </p>
+                    </li>
+                    <li>
+                        <p>Module "Production orale"</p>
+                        <p>Cours par Skype avec Shéma P.0. + commentaire + evaluiation</p>
+                    </li>
+                    <li>
+                        <p>
+                            Cours des preparation individualisés
+                        </p>
+                        <p>Un approches individualises bla-bla</p>
+                    </li>
+                </ul>
+            </div>
+
         </section>
 
         <section class="exam" id="exam">
@@ -210,45 +256,62 @@
                 <div class="exam__items row">
 
                     <div class="exam__item col-md-3 col-sm-6">
-                        <i class="fa fa-headphones" aria-hidden="true"></i>
-
-                        <div class="exam__name">Comprehension orale</div>
-                        <div class="exam__time">durée de 30 minutes environ</div>
-                        <div class="exam__info">(2 exercices)</div>
+                        <a href="#compr-orale" data-toggle="collapse" class="exam__name">
+                            <i class="fa fa-headphones" aria-hidden="true"></i>
+                            Comprehension orale
+                        </a>
+                        <div class="collapse exam__info" id="compr-orale">
+                            <span><i class="fa fa-hourglass-half"></i> durée de 30 minutes environ</span>
+                            <span>(2 exercices)</span>
+                        </div>
                     </div>
-                    <div class="exam__item col-md-3 col-sm-6">
-                        <i class="fa fa-book" aria-hidden="true"></i>
 
-                        <div class="exam__name">Comprehension écrit</div>
-                        <div class="exam__time"> <i class="fa fa-hourglass-half"></i> durée de 30 minutes environ</div>
-
-                        <div class="exam__info">(2 exercices)</div>
-                    </div>
-                    <div class="exam__item col-md-3 col-sm-6">
-                        <i class="fa fa-pencil" aria-hidden="true"></i>
-
-                        <div class="exam__name">Production écrite</div>
-                        <div class="exam__time">durée de 30 minutes environ</div>
-                        <div class="exam__info">(2 exercices)</div>
-                    </div>
                     <div class="exam__item col-md-3 col-sm-6">
 
-                        <i class="fa fa-comment" aria-hidden="true"></i>
+                        <a href="#compr-ecrit" data-toggle="collapse"  class="exam__name">
+                            <i class="fa fa-book" aria-hidden="true"></i>
+                            Comprehension écrit
+                        </a>
+                        <div class="collapse exam__info" id="compr-ecrit">
+                            <span><i class="fa fa-hourglass-half"></i> durée de 1 heure environ</span>
+                            <span>(2 exercices)</span>
+                        </div>
+                    </div>
+                    <div class="exam__item col-md-3 col-sm-6">
+                        <a href="#prod-ecrit" data-toggle="collapse" class="exam__name">
+                            <i class="fa fa-pencil" aria-hidden="true"></i>
+                            Production écrite
+                        </a>
+                        <div class="exam__info collapse" id="prod-ecrit">
+                            <span><i class="fa fa-hourglass-half"></i> durée 1 heure</span>
+                            <span>350 mots doit etre ecrite</span>
+                        </div>
 
-                        <div class="exam__name">Production orale</div>
-                        <div class="exam__time">durée de 30 minutes environ</div>
-                        <div class="exam__info">(2 exercices)</div>
+                    </div>
+                    <div class="exam__item col-md-3 col-sm-6">
+                        <a href="#prod-orale" data-toggle="collapse" class="exam__name">
+                            <i class="fa fa-comment" aria-hidden="true"></i>
+                            Production orale
+                        </a>
+                        <div class="exam__info collapse" id="prod-orale">
+                            <span><i class="fa fa-hourglass-half"></i> Preparation 30 minutes</span>
+                            <span>20 minutes de persuades</span>
+                        </div>
+
                     </div>
 
                 </div>
                 <div class="exam__text">
+                    <h3 class="exam__text-title">Comment se passe concretement ?</h3>
                     <p><i class="fa fa-long-arrow-right"></i> les 4 parties vous sont envoyées par email au fur et au mesure de l'examen</p>
                     <p><i class="fa fa-long-arrow-right"></i> à la fin de chaque pertie vous devez nous envoyer vos reponses. Une pause de 15 minutes sera faite pour vous repos</p>
                     <p><i class="fa fa-long-arrow-right"></i> la totalité de l'examen dure environ ' herues. Assurez-vous de bien disploser de ce temps libre</p>
                 </div>
-                <a href="#" class="exam__link">Inscrive vous à examen blanc B2</a>
+                <a href="#" class="exam__link" data-toggle="modal" data-target="#basicModal">Inscrive vous à examen blanc B2</a>
             </div>
         </section>
+
+
 
         <footer class="main-footer">
             <div class="container">
@@ -279,8 +342,73 @@
 
 
     </main>
+
+    <div class="modal fade" id="basicModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header"><button class="close" type="button" data-dismiss="modal">x</button>
+                    <h4 class="modal-title" id="myModalLabel">Заполните, пожайлуста, форму связи</h4>
+                </div>
+                <form action="#" method="post">
+                    <div class="modal-body">
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label" for="name">Votre nome:</label>
+                            <div class="col-sm-9">
+                                <input class="form-control" type="text" id="name" name="name">
+
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label" for="email">Votre email:</label>
+                            <div class="col-sm-9">
+                                <input class="form-control" type="text" id="email" name="email">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label" for="phone">Votre téléphone:</label>
+                            <div class="col-sm-9">
+                                <input class="form-control" type="text" id="phone" name="phone">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-3 col-form-label" for="langue">Votre langue maternelle</label>
+                            <div class="col-sm-9">
+                                <select class="form-control" name="langue" id="langue">
+                                    <option value="">Choisissez votre langue</option>
+                                    <option value="ru">Chinous</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <span class="col-sm-3 col-form-label">Niveau vous vulez obtenir</span>
+                            <div class="col-sm-9">
+                            <label class="form-check-inline">
+                              <input class="form-check-input" type="radio" name="level" id="B1" value="B1"> B1
+                            </label>
+                            <label class="form-check-inline">
+                                <input class="form-check-input" type="radio" name="level" id="B2" value="B2"> B2
+                            </label>
+                            <label class="form-check-inline">
+                                 <input class="form-check-input" type="radio" name="level" id="C1" value="C1"> C1
+                            </label>
+                            <label class="form-check-inline">
+                                <input class="form-check-input" type="radio" name="level" id="C2" value="C2"> C2
+                            </label>
+                        </div>
+                        </div>
+                        <textarea class="form-control" name="msg" id="msg" cols="30" rows="6" placeholder="Erivez votre message"></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-default" type="button" data-dismiss="modal">Закрыть</button>
+                        <button class="btn btn-primary" type="submit">Связаться</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script> -->
     <script src="vendor/jcarusel/jquery.jcarousel.min.js"></script>
     <script src="scripts/main.min.js"></script>
 </body>

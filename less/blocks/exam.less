@@ -7,33 +7,55 @@
 
 .exam__item {
   text-align: center;
-  &>i {
+
+
+
+}
+
+.exam__name {
+  display: inline-block;
+  font-size: 30px;
+  padding-top: 90px;
+  position: relative;
+  font-weight: bold;
+  transition: @transition;
+  color: @common-color_1;
+  & > i {
+
     color: @common-color_1;
+
+    position: absolute;
+    top: 0;
+    left: 50%;
     font-size: 40px;
     display: inline-block;
     border-radius: 50%;
     padding: 15px;
     border: 3px solid @common-color_1;
+    transform: translateX(-50%);
     transition: @transition;
   }
 
   &:hover {
-      &>i {
+    text-decoration: none;
+      & > i {
       font-size: 55px;
     }
 
   }
+
+  &:focus {
+
+  }
 }
 
-.exam__name {
-  font-size: 30px;
-  font-weight: bold;
-}
-
-.exam__time {
+.exam__info {
   i {
     font-size: 16px;
 
+  }
+  span {
+    display: block;
   }
 }
 
